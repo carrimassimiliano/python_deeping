@@ -1,0 +1,3 @@
+[*map(lambda x: hasattr(x,'__rmod__'), [1,'d',{}])].index(False) if False in [*map(lambda x: hasattr(x,'__rmod__'), [1,'d',{}])] else None
+
+attributo __rmod__ solo in str e int e non in tuple list o dict
