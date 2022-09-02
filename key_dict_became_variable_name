@@ -1,0 +1,23 @@
+from numpy import array,matrix
+
+temp = {'key':array([1,2])}
+
+for k in temp:
+   print(temp['key']) 
+   exec('{keysa}= {value}'.format(keysa=k, value=repr(temp[k])) )
+
+
+
+
+OPPURE altro spunto
+
+
+class attrdict(dict):
+   def __getattr__(self, k): return self.k
+   #def __setattr__(self, k, v): self[k] = v
+   __setattr__=dict.__setitem__
+   pass   
+    
+somedict = {'key':{'f':700}}
+
+data = attrdict(somedict)
